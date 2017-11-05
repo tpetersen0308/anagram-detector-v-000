@@ -8,7 +8,7 @@ class Anagram
 
   def match(candidates)
     candidates.find_all do |candidate|
-      (candidate.size == @word.size) && candidate.split("").all? { |letter| @word.split("").include?(letter)}
+      (candidate.size == @word.size) && @word.split("").all? { |letter| candidate.split("").include?(letter)}
     end
 
   end
